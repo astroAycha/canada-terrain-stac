@@ -14,16 +14,15 @@ Using a cloud-native workflow built on:
 the pipeline queries, loads, and processes terrain data directly from cloud-hosted sources.
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[AOI + Collection] --> B[STAC API Query]
     B --> C[STAC Items]
     C --> D[odc.stac.load]
     D --> E[Dask-backed xarray Dataset]
     E --> F[DSM]
-    F --> G[Slope]
-    G --> H[.compute()]
-    H --> I[Slope, Hillshade, Aspect]
-    I --> J[Visualization / Export]
+    F --> G[.compute()]
+    G --> H[Slope, Hillshade, Aspect]
+    H --> I[Visualization and Export]
 ```
 
 ## Purpose
