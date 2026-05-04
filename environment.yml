@@ -1,0 +1,29 @@
+name: dem_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+ 
+  - gdal
+  - rasterio
+  - geopandas
+  - shapely
+  - odc-stac
+  - pystac-client
+  - pystac=1.11.0
+  - leafmap
+  - contextily
+  - numpy
+  - xarray
+  - xarray-spatial
+  - rioxarray
+  - matplotlib
+  - plotly
+  - folium
+  - hvplot
+  - geoviews
+  - jupyter_bokeh
+  - pip
+  - pip:
+    - ipywidgets_bokeh
