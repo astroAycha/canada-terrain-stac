@@ -15,12 +15,12 @@ the pipeline queries, loads, and processes terrain data directly from cloud-host
 
 ```mermaid
 flowchart TD
-    A[AOI + Collection] --> B[STAC API Query]
+    A[AOI and Collection] --> B[STAC API Query]
     B --> C[STAC Items]
-    C --> D[odc.stac.load]
+    C --> D[odc stac load]
     D --> E[Dask-backed xarray Dataset]
     E --> F[DSM]
-    F --> G[.compute()]
+    F --> G[Compute]
     G --> H[Slope, Hillshade, Aspect]
     H --> I[Visualization and Export]
 ```
