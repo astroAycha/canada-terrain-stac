@@ -11,7 +11,17 @@ Using a cloud-native workflow built on:
 - Dask
 - hvplot and plotly for visualization
 
-the pipeline queries, loads, and processes terrain data directly from cloud-hosted sources.
+## Purpose
+
+This project showcases a modern geospatial data workflow for:
+
+- Efficient access to large raster datasets
+- Reproducible, scalable analysis
+- Deriving terrain features (e.g., slope, hillshade)
+
+These features are commonly used in downstream geospatial data science and machine learning applications.
+
+The pipeline queries, loads, and processes terrain data directly from cloud-hosted sources.
 
 ```mermaid
 flowchart TD
@@ -25,12 +35,4 @@ flowchart TD
     H --> I[Visualization and Export]
 ```
 
-## Purpose
 
-This project showcases a modern geospatial data workflow for:
-
-- Efficient access to large raster datasets
-- Reproducible, scalable analysis
-- Deriving terrain features (e.g., slope, hillshade)
-
-These features are commonly used in downstream geospatial data science and machine learning applications.
