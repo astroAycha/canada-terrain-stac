@@ -6,7 +6,7 @@ import json
 import geopandas as gpd
 import pandas as pd
 import plotly.express as px
-from shapely.geometry import box
+from shapely.geometry import box, polygon
 
 
 # ---------------------------
@@ -128,11 +128,10 @@ def _add_bbox(fig, bbox: tuple) -> None:
     Overlay a red bounding box outline on an existing Plotly map figure.
     """
     minx, miny, maxx, maxy = bbox
-    bbox_geojson = json.loads(
-        gpd.GeoSeries([box(minx, miny, maxx, maxy)]).to_json()
-    )
+    polygon_gpd = gpd.GeoSeries([polygon.Polygon.from_bounds(minx, miny, maxx, maxy)],
+                      crs="EPSG:4326")
     fig.add_choroplethmap(
-        geojson=bbox_geojson,
+        geojson=polygon_gpd.__geo_interface__,
         locations=[0],
         z=[1],
         colorscale=[[0, "rgba(0,0,0,0)"], [1, "rgba(0,0,0,0)"]],
