@@ -1,6 +1,8 @@
 # Cloud-Native Terrain Analysis with STAC
 
-This repository demonstrates a scalable approach to working with high-resolution Digital Elevation Model (DEM) data—without downloading large datasets locally.
+This repository accompanies the article: https://aychatammour.com/writing/cnd_arctic_dem/cnd_dem_stac.html
+
+This project demonstrates a scalable approach to working with high-resolution Digital Elevation Model (DEM) data—without downloading large datasets locally.
 
 Using a cloud-native workflow built on:
 
@@ -10,6 +12,8 @@ Using a cloud-native workflow built on:
 - Open Data Cube (ODC)
 - Dask
 - hvplot and plotly for visualization
+
+![Shaded Relief Screenshot](shaded_relief_screenshot.png)
 
 ## Purpose
 
@@ -35,4 +39,22 @@ flowchart TD
     H --> I[Visualization and Export]
 ```
 
+## Key Features
+
++ Cloud-native access to DEM datasets
++ Parallelized processing with Dask
++ Interactive visualization workflows
++ Reproducible geospatial analysis pipeline
++ No need for local storage of large raster files
+
+## Example Applications
+
++ Arctic terrain analysis
++ Environmental monitoring
++ Hydrology and watershed studies
++ Remote sensing workflows
++ Terrain-based machine learning features
+
+
+For a full walkthrough and explanation of the workflow, please [read the article](https://aychatammour.com/writing/cnd_arctic_dem/cnd_dem_stac.html)
 
